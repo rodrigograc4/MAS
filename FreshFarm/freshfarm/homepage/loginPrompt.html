@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>FreshFarm Item</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/b2f87400b5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="../homepage/index.html"> <i class="fas fa-carrot"></i> FreshFarm</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="../homepage/index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!"> <i class="fa fa-address-book" aria-hidden="true"></i> Contactos</a></li>
+                </ul>
+                <form class="d-flex">
+                    <button class="btn btn-outline-light" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <i class="bi-cart-fill me-1"></i>
+                        Cart
+                        <span class="badge bg-dark text-white ms-1 rounded-pill" id="CARTNUM">0</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Product section-->
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center align-items-center" id="bgone">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-10 mb-3 text-center">
+                        <h1><span class="badge rounded-pill bg-success text-white">Login</span></h1>
+                    </div>
+                </div>
+                <div class="col-2 mb-3 text-center">
+                    <button type="button" class="btn btn-primary" id="C">Como Cliente</button>
+                </div>
+                <div class="col-2 mb-3 text-center">
+                    <button type="button" class="btn btn-primary" id="F">Como Fornecedor</button>
+                </div>
+            </div>
+        <div id="show" class="d-none">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-10 mb-3 text-center">
+                    <h1><span class="badge rounded-pill bg-success text-white">Inicar Sessão</span></h1>
+                </div>
+            </div>
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-10 mb-1 text-center">
+                    <h4 class="CLIENT"><span class="badge rounded-pill bg-info text-white">Cliente</span></h4>
+                    <h4 class="FORNECEDOR"><span class="badge rounded-pill bg-info text-white">Fornecedor</span></h4>
+                </div>
+            </div>
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-4 mb-1 text-center">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text bg-success text-white" id="basic-addon1">E-MAIL</span>
+                        <input id="EMAIL" type="text" class="form-control" placeholder="O seu endereço de correio digital" aria-label="Telemóvel" aria-describedby="basic-addon1">
+                      </div>
+                      <div class="text-danger d-none">
+                        <i class="fas fa-exclamation-triangle"></i> Erro! Não existe uma conta com este endereço!
+                      </div>
+                </div>
+            </div>
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-4 mb-1 text-center">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text bg-success text-white" id="basic-addon1">PALAVRA-PASSE</span>
+                        <input id="pchave" type="text" class="form-control" placeholder="A sua palavra-passe" aria-label="Telemóvel" aria-describedby="basic-addon1">
+                      </div>
+                      <div class="text-danger d-none">
+                        <i class="fas fa-exclamation-triangle"></i> Erro! Palavra-passe inválida!
+                      </div>
+                </div>
+            </div>
+            <div class="row gx-4 gx-lg-5 justify-content-center FORNECEDOR">
+                <div class="col-4 mb-1 text-center">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text bg-success text-white" id="basic-addon1">CÓDIGO DE SEGURANÇA</span>
+                        <input id="CS" type="text" class="form-control" placeholder="****" aria-label="Telemóvel" aria-describedby="basic-addon1">
+                      </div>
+                      <div class="text-danger d-none">
+                        <i class="fas fa-exclamation-triangle"></i> Erro! Código de segurança inválido
+                      </div>
+                </div>
+            </div>
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-10 mb-3 text-center">
+                    <a href="#"><span class="text-success" id="basic-addon1">Criar conta</span></a>
+                </div>
+            </div>
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-10 mb-3 text-center">
+                    <button type="button" class="btn btn-primary ISBTN">Iniciar Sessão</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <div class="col" style="height: 300px">
+
+    </div>
+    <!-- Related items section-->
+    
+
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container"><p class="m-0 text-center text-white">Copyright &copy; FreshFarm 2021</p></div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#F").click(function(){
+                $("#bgone").addClass("d-none");
+                $("#show").removeClass("d-none");
+                $(".CLIENT").addClass("d-none");
+            });
+            $("#C").click(function(){
+                $("#bgone").addClass("d-none");
+                $("#show").removeClass("d-none");
+                $(".FORNECEDOR").addClass("d-none");
+            });
+            $(".ISBTN").click(function(){
+                var retVal = true;
+                var vE = $("#EMAIL").val().trim();
+                if (vE != "eduardo@gmail.com") {
+                    $(".text-danger").eq(0).removeClass("d-none");
+                    retVal = false;
+                } else {
+                    $(".text-danger").eq(0).addClass("d-none");
+                }
+                var vP = $("#pchave").val().trim();
+                if (vP != "12345") {
+                    $(".text-danger").eq(1).removeClass("d-none");
+                    retVal = false;
+                } else {
+                    $(".text-danger").eq(1).addClass("d-none");
+                }
+                if ( $(".FORNECEDOR.d-none").length == 0 ) {
+                    var vCS = $("#CS").val().trim();
+                    if (vCS != "CP98") {
+                        $(".text-danger").eq(2).removeClass("d-none");
+                        retVal = false;
+                    } else {
+                        $(".text-danger").eq(2).addClass("d-none");
+                    }
+                }
+                if (retVal == true) {
+                    window.location = "indexLoggedIn.html"
+                }
+            });
+        });
+    </script>
+</body>
+</html>

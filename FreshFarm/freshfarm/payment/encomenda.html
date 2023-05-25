@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>FreshFarm Homepage</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/b2f87400b5.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="../homepage/index.html"> <i class="fas fa-carrot"></i> FreshFarm</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="../homepage/index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="../payment/pagamento.html"> <i class="fa fa-dropbox" aria-hidden="true"></i> Encomendas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!"> <i class="fa fa-address-book" aria-hidden="true"></i> Contactos</a></li>
+                    </ul>
+                    <div class="d-flex">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                            <li class="nav-item border-end"><a class="nav-link active" href="#!"> <i class="fa fa-user" aria-hidden="true"></i>Eduardo Martins</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html"> <i class="fas fa-sign-out-alt"></i>Terminar Sessão</a></li>
+                        </ul>  
+                        <button class="btn btn-outline-light" type="submit">
+                            <i class="bi-cart-fill me-1"></i>
+                            Cart
+                            <span class="badge bg-dark text-white ms-1 rounded-pill">2</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Section-->
+        <section class="py-1">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5" style="margin-top: 20px;">
+                    <div class="col-6 mb-5">
+                        <h1><span class="badge rounded-pill bg-success text-white">As suas encomendas <i class="fas fa-gift"></i></span></h1>
+                    </div>
+                </div>
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col mb-5 text-center">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Encomenda</th>
+                                <th scope="col">Produtos</th>
+                                <th scope="col">Morada</th>
+                                <th scope="col"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr id="delrow">
+                                <th scope="row">2022/01/25</th>
+                                <td>Batatas(2)</td>
+                                <td>Avenida S. José nº12</td>
+                                <th scope="col"><button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fas fa-trash-alt"></i></button></th>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="col" style="height: 350px">
+
+        </div>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; FreshFarm 2021</p></div>
+        </footer>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-dark">
+        </div>
+        <div class="modal-body text-center">
+            Deseja cancelar a sua encomenda ?
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="delbtn">Sim</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script>
+        <!-- Jquery -->
+        <script>
+            $(document).ready(function(){
+                $("#delbtn").click(function(){
+                    $("#delrow").remove();
+                });
+            });
+        </script>
+
+    </body>
+</html>

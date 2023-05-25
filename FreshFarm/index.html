@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>FreshFarm Homepage</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/b2f87400b5.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="freshfarm/homepage/index.html"> <i class="fas fa-carrot"></i> FreshFarm</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="freshfarm/homepage/index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!"> <i class="fa fa-address-book" aria-hidden="true"></i> Contactos</a></li>                    
+                    </ul>
+                    <div class="d-flex">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                            <li class="nav-item border-end"><a id="LOGIN" class="nav-link" href="freshfarm/homepage/loginPrompt.html"> <i class="fa fa-user" aria-hidden="true"></i>Login</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#!"> <i class="fa fa-plus" aria-hidden="true"></i>Criar conta</a></li>
+                        </ul>                    
+                        <button class="btn btn-outline-light" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <i class="bi-cart-fill me-1"></i>
+                            Cart
+                            <span class="badge bg-dark text-white ms-1 rounded-pill" id="CARTNUM">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">FreshFarm</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">Os melhores produtos frescos de época</p>
+                </div>
+            </div>
+        </header>
+        <!-- Section-->
+        <section class="py-1">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 justify-content">
+                    <div class="col mb-2 d-flex justify-content-center">
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link BOU active" id="epoca" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Época Atual</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link BOU" id="veg" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Vegetariano</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link BOU" id="bio" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Biológico</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="btn btn-danger BOU" id="promo" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Promoções</button>
+                              </li>
+                          </ul>
+                          
+                    </div>
+                </div>
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-4 col-sm mb-2">
+                        <h3> <span class="badge rounded-pill bg-success">Categorias</span></h3>
+                    </div>
+                    <div class="col-4 mb-2 offset-md-4">
+                        <div class="input-group mb-3">
+                            <!-- Search Bar -->
+                            <button class="btn btn-outline-secondary" type="button" id="search"><i class="fas fa-search"></i></button>
+                            <input type="text" class="form-control" placeholder="Pesquisar" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                        </div>
+                    </div>
+                </div>
+                <div class="row gx-1 gx-lg-2">
+                    <div class="col-12 col-sm mb-2">
+                        <select class="form-select CAT" aria-label="Default select example">
+                            <option selected value="ppreco">[Por preço]</option>
+                            <option value="asc">Ascendente</option>
+                            <option value="des">Descendente</option>
+                          </select>
+                    </div>
+                    <div class="col-12 col-sm mb-2">
+                        <select class="form-select CAT" aria-label="Default select example">
+                            <option selected value="pepoca">[Por época]</option>
+                            <option value="jan">Janeiro</option>
+                            <option value="fev">Fevereiro</option>
+                            <option value="mar">Março</option>
+                            <option value="abr">Abril</option>
+                            <option value="mai">Maio</option>
+                            <option value="jun">Junho</option>
+                            <option value="jul">Julho</option>
+                            <option value="ago">Agosto</option>
+                            <option value="set">Setembro</option>
+                            <option value="out">Outubro</option>
+                            <option value="nov">Novembro</option>
+                            <option value="dez">Dezembro</option>
+                          </select>
+                    </div>
+                    <div class="col-12 col-sm mb-2">
+                        <select class="form-select CAT" aria-label="Default select example">
+                            <option selected value="pgluten">[Glúten]</option>
+                            <option value="cglut">Com glúten</option>
+                            <option value="sglut">Sem glúten</option>
+                          </select>
+                    </div>
+                    <div class="col-12 col-sm mb-2">
+                        <select class="form-select CAT" aria-label="Default select example">
+                            <option selected value="pfor">[Por fornecedor]</option>
+                            <option value="for1">Fornecedor 1</option>
+                            <option value="for2">Fornecedor 2</option>
+                          </select>
+                    </div>
+                    <div class="col-12 col-sm mb-2">
+                        <select class="form-select CAT" aria-label="Default select example">
+                            <option selected value="palimento">[Por tipo de alimento]</option>
+                            <option value="cereal">Cereais, pães e tubérculos</option>
+                            <option value="horta">Hortaliças</option>
+                            <option value="fruta">Frutas</option>
+                            <option value="leguminosa">Leguminosas</option>
+                            <option value="carne">Carnes e Ovos</option>
+                          </select>
+                    </div>
+                </div>
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" id="plist">
+                    <div class="PRODUTO col mb-5 jan fev mar abr mai jun jul ago set out nov dez cglut for1 cereal epoca veg bio">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://hortaemcasa.pt/wp-content/uploads/2021/11/batata-assar_r5lqck.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder NOME">Batatas</h5>
+                                    <!-- Product price-->
+                                    <span class="PRECO">0.20</span><span>€</span>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-2 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto ADDBTN" href="#">Adicionar</a>
+                                    <input type="number" min="0" max="150" size="1" class="INPUTNUM" value="0"></div>
+                                
+                            </div>
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="freshfarm/shop-item/batatas.html">Ver mais</a></div>
+                            </div>
+                            <div class="card-footer p-4 pt-0 bg-transparent">
+                                <div class="text-center">
+                                <span class="badge rounded-pill bg-success">ÉPOCA</span>
+                                <span class="badge rounded-pill bg-success">BIO</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="PRODUTO col mb-5 jan fev mar abr jun jul ago set out nov dez sglut for1 horta veg bio">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="img\couve.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder NOME">Couve</h5>
+                                    <!-- Product price-->
+                                    <span class="PRECO">0.35</span><span>€</span>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-2 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto ADDBTN" href="#">Adicionar</a>
+                                    <input type="number" min="0" max="150" size="1" class="INPUTNUM" value="0"></div>
+                            </div>
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="freshfarm/shop-item/couve.html">Ver mais</a></div>
+                            </div>
+                            <div class="card-footer p-4 pt-0 bg-transparent">
+                                <div class="text-center">
+                                <span class="badge rounded-pill bg-success">BIO</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="PRODUTO col mb-5 jan fev mar abr ago set out nov dez sglut for2 epoca bio veg fruta">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="img\maca.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder NOME">Maçãs</h5>
+                                    <!-- Product price-->
+                                    <span class="PRECO">0.45</span><span>€</span>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-2 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto ADDBTN" href="#">Adicionar</a>
+                                    <input type="number" min="0" max="150" size="1" class="INPUTNUM" value="0"></div>
+                            </div>
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="freshfarm/shop-item/maçãs.html">Ver mais</a></div>
+                            </div>
+                            <div class="card-footer p-4 pt-0 bg-transparent">
+                                <div class="text-center">
+                                <span class="badge rounded-pill bg-success">ÉPOCA</span>
+                                <span class="badge rounded-pill bg-success">BIO</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="PRODUTO col mb-5 jan fev mar abr mai jun jul ago set out nov dez cglut for1 cereal epoca veg bio">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="img\cenoura.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder NOME">Cenouras</h5>
+                                    <!-- Product price-->
+                                    <span class="PRECO">0.30</span><span>€</span>
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-2 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto ADDBTN" href="#">Adicionar</a>
+                                    <input type="number" min="0" max="150" size="1" class="INPUTNUM"value="0"></div>
+                            </div>
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="freshfarm/shop-item/cenoura.html">Ver mais</a></div>
+                            </div>
+                            <div class="card-footer p-4 pt-0 bg-transparent">
+                                <div class="text-center">
+                                    <span class="badge rounded-pill bg-success">ÉPOCA</span>
+                                    <span class="badge rounded-pill bg-success">BIO</span>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-success">
+          <h5 class="modal-title text-white" id="staticBackdropLabel"><i class="fas fa-shopping-cart"></i> Carrinho de Compras</h5>
+          <button type="button" class="text-white btn btn-dark" data-bs-dismiss="modal" aria-label="Close"><h4><i class="far fa-times-circle"></i></h4></button>
+        </div>
+        <div class="modal-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-9">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Produto</th>
+                                <th scope="col">Preço</th>
+                                <th scope="col">Quantidade</th>
+                                <th scope="col"></th>
+                              </tr>
+                            </thead>
+                            <tbody id="CARTLIST">
+                            </tbody>
+                          </table>
+                    </div>
+                    <div class="col-12 col-sm-3">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Total</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><span id="TOTALPRICE">0.00</span><span>€</span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <a id="FINA" href="freshfarm/loginPrompt.html"><button type="button" disabled class="btn btn-primary rounded-pill text-white">Finalizar Compras</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; FreshFarm 2021</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function(){
+                $(".PRODUTO").not(".epoca").addClass("d-none");
+
+            $(".ADDBTN").click(function(){
+                var E = event.target;
+                var namE = $(E).parentsUntil("#plist").find(".NOME").text();
+                var pricE = parseFloat( $(E).parentsUntil("#plist").find(".PRECO").text() );
+                var quanT = parseInt( $(E).nextAll().val() );
+                console.log(pricE);
+                console.log(quanT);
+                if (quanT > 0) {
+                    $("#CARTNUM").text(parseInt ( $("#CARTNUM").text() ) + quanT);
+                    $("#TOTALPRICE").text( ( parseFloat( $("#TOTALPRICE").text() ) + quanT * pricE ).toFixed(2));
+
+                    if ($("#" + namE).length == 0) {
+                    $("#CARTLIST").append("<tr><th scope='row'>" + namE + "</th><td class='mP'>" + pricE.toFixed(2) + "€" + "</td><td id='Q' class='QUA'>" + quanT + "</td><td><button type='button' class='btn btn-danger DELBTN float-end'><i class='fas fa-trash'></i></button></td></tr>");
+                    $("#Q").attr("id", namE);
+                    }
+                    else{
+                        $("#" + namE).text( parseInt( $("#" + namE).text() ) + quanT );
+                    }
+                }
+            });
+            $("#CARTLIST").on("click", ".DELBTN", function(){
+                var E = event.target;
+                console.log(E);
+                var deL = $(E).parentsUntil("#CARTLIST");
+                $("#TOTALPRICE").text( ( parseFloat( $("#TOTALPRICE").text() ) - ( parseFloat( $(deL).find(".mP").text().replaceAll("€", "") ) * parseInt( $(deL).find(".QUA").text() ) )  ).toFixed(2).replaceAll("-",""));
+                $("#CARTNUM").text( parseInt( $("#CARTNUM").text() ) - parseInt( $(deL).find(".QUA").text() ));
+                $(deL).remove();
+            });
+            $("select").change(function (){
+                $(".PRODUTO").removeClass("d-none");
+                var btnCat = $(".BOU.active").attr("id");
+                console.log(btnCat);
+                $(".PRODUTO").not("."+btnCat).addClass("d-none");
+                var catList = $(".CAT");
+                for (let i = 0; i < catList.length; i++){
+                    var valor = catList.eq(i).val();
+                    if (valor != "ppreco" && valor != "pepoca" && valor != "pgluten" && valor != "pfor" && valor != "palimento") {
+                        console.log(valor);
+                        if (valor != "asc" && valor != "des") {
+                            $(".PRODUTO").not("."+valor).addClass("d-none");
+                        }
+                        else if (valor == "asc") {
+                            var p = $(".PRODUTO").sort(function(a,b){
+                                var A = parseFloat( $(a).find(".PRECO").text() );
+                                var B = parseFloat( $(b).find(".PRECO").text() );
+                                if (A > B) {
+                                    return 1;
+                                }
+                                if (A < B) {
+                                    return -1;
+                                }
+                                if (A == B) {
+                                    return 0;
+                                }
+                            });
+                            $("#plist").empty();
+                            $("#plist").html(p);
+                        } else if (valor == "des") {
+                            var p = $(".PRODUTO").sort(function(a,b){
+                                var A = parseFloat( $(a).find(".PRECO").text() );
+                                var B = parseFloat( $(b).find(".PRECO").text() );
+                                if (A > B) {
+                                    return -1;
+                                }
+                                if (A < B) {
+                                    return 1;
+                                }
+                                if (A == B) {
+                                    return 0;
+                                }
+                            });
+                            $("#plist").empty();
+                            $("#plist").html(p);
+                        }
+                    }
+                }
+            });
+            $(".BOU").click(function(){
+                $(".PRODUTO").removeClass("d-none");
+                var btnCat = $(".BOU.active").attr("id");
+                console.log(btnCat);
+                $(".PRODUTO").not("."+btnCat).addClass("d-none");
+                var catList = $(".CAT");
+                for (let i = 0; i < catList.length; i++){
+                    var valor = catList.eq(i).val();
+                    if (valor != "ppreco" && valor != "pepoca" && valor != "pgluten" && valor != "pfor" && valor != "palimento") {
+                        if (valor != "asc" && valor != "des") {
+                            $(".PRODUTO").not("."+valor).addClass("d-none");
+                        }
+                        else if (valor == "asc") {
+                            var p = $(".PRODUTO").sort(function(a,b){
+                                var A = parseFloat( $(a).find(".PRECO").text() );
+                                var B = parseFloat( $(b).find(".PRECO").text() );
+                                if (A > B) {
+                                    return 1;
+                                }
+                                if (A < B) {
+                                    return -1;
+                                }
+                                if (A == B) {
+                                    return 0;
+                                }
+                            });
+                            $("#plist").empty();
+                            $("#plist").html(p);
+                        } else if (valor == "des") {
+                            var p = $(".PRODUTO").sort(function(a,b){
+                                var A = parseFloat( $(a).find(".PRECO").text() );
+                                var B = parseFloat( $(b).find(".PRECO").text() );
+                                if (A > B) {
+                                    return -1;
+                                }
+                                if (A < B) {
+                                    return 1;
+                                }
+                                if (A == B) {
+                                    return 0;
+                                }
+                            });
+                            $("#plist").empty();
+                            $("#plist").html(p);
+                        }
+                    }
+                }
+            });
+            $("#search").click(function(){
+                $(".PRODUTO").removeClass("d-none");
+                var S = $("#search").nextAll().val().trim().toLowerCase();
+                console.log(S);
+                var prod = $(".PRODUTO");
+                if (S != "") {
+                for(let i = 0; i < prod.length; i++){
+                    var nA = prod.eq(i).find(".NOME").text().trim().toLowerCase();
+                    console.log(nA);
+                    if (!(nA.includes(S))) {
+                        console.log("HIDE")
+                        prod.eq(i).addClass("d-none");
+                    }
+                }
+                }
+                var btnCat = $(".BOU.active").attr("id");
+                console.log(btnCat);
+                $(".PRODUTO").not("."+btnCat).addClass("d-none");
+                var catList = $(".CAT");
+                for (let i = 0; i < catList.length; i++){
+                    var valor = catList.eq(i).val();
+                    if (valor != "ppreco" && valor != "pepoca" && valor != "pgluten" && valor != "pfor" && valor != "palimento") {
+                        if (valor != "asc" && valor != "des") {
+                            $(".PRODUTO").not("."+valor).addClass("d-none");
+                        }
+                        else if (valor == "asc") {
+                            var p = $(".PRODUTO").sort(function(a,b){
+                                var A = parseFloat( $(a).find(".PRECO").text() );
+                                var B = parseFloat( $(b).find(".PRECO").text() );
+                                if (A > B) {
+                                    return 1;
+                                }
+                                if (A < B) {
+                                    return -1;
+                                }
+                                if (A == B) {
+                                    return 0;
+                                }
+                            });
+                            $("#plist").empty();
+                            $("#plist").html(p);
+                        } else if (valor == "des") {
+                            var p = $(".PRODUTO").sort(function(a,b){
+                                var A = parseFloat( $(a).find(".PRECO").text() );
+                                var B = parseFloat( $(b).find(".PRECO").text() );
+                                if (A > B) {
+                                    return -1;
+                                }
+                                if (A < B) {
+                                    return 1;
+                                }
+                                if (A == B) {
+                                    return 0;
+                                }
+                            });
+                            $("#plist").empty();
+                            $("#plist").html(p);
+                        }
+                    }
+                }
+                
+            });
+        });
+        </script>
+        <!-- Jquery -->
+        
+    </body>
+</html>
